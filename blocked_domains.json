@@ -1,4 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_instances.schema.json",
+    "$schema": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_domains.schema.json",
     "domain_blocks": []
 }

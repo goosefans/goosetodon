@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_instances.schema.json",
+    "$id": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_domains.schema.json",
     "type": "object",
     "properties": {
         "domain_blocks": {
