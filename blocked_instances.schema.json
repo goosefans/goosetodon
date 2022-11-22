@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_instances.schema.json",
+    "type": "object",
+    "properties": {
+        "domain_blocks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "domains": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "severity": {
+                        "type": "string",
+                        "enum": [
+                            "suspend",
+                            "silence",
+                            "none"
+                        ],
+                        "default": "none"
+                    },
+                    "reject_media": {
+                        "type": "boolean",
+                        "default": false
+                    },
+                    "reject_reports": {
+                        "type": "boolean",
+                        "default": false
+                    },
+                    "reason": {
+                        "type": "string",
+                        "default": ""
+                    }
+                },
+                "required": [
+                    "domains"
+                ]
+            }
+        }
+    },
+    "required": [
+        "domain_blocks"
+    ]
+}
