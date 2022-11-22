@@ -1,0 +1,64 @@
+name: Domain block addition
+description: Request a new domain to be blocked
+title: "[+Block]: "
+labels: ["blocked-domains"]
+body:
+  - type: input
+    id: domains
+    attributes:
+      label: Domain(s)
+      description: |
+        Which domain(s) should be blocked (comma-separated)?
+        If they are not related to each other, please open separate issues.
+      placeholder: e.g. kiwifarms.net,kiwifarms.cc
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: |
+        In which way should the domain be restricted?
+        **Suspend** will completely suspend the domain, while **silence** will only make the instance's posts invisible to accounts not following anyone there.
+        **None** will not impose any restrictions on the visibility of the instance. This should only be used if only restricting media and/or reports is necessary.
+      options:
+        - Suspend
+        - Silence
+        - No severity
+    validations:
+      required: true
+  - type: dropdown
+    id: reject_media
+    attributes:
+      label: Reject media
+      description: Should media files from these instances be rejected? This has no effect if the instances are suspended.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: dropdown
+    id: reject_reports
+    attributes:
+      label: Reject reports
+      description: Should reports from these instances be rejected? This has no effect if the instances are suspended.
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: reason
+    attributes:
+      label: Reason
+      description: A short(!) reason why these domains should be blocked. This will be shown on the blocked instances list.
+      placeholder: e.g. racism
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Please provide some evidence about your claims. This is necessary to prevent abuse.
+    validations:
+      required: true
