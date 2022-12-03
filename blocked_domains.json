@@ -1,4 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/goosefans/goosetodon/main/blocked_domains.schema.json",
-    "domain_blocks": []
+    "domain_blocks": [
+        {
+            domains: ["activitypub-troll.cf", "misskey-forkbomb.cf", "repl.co"],
+            severity: "suspend",
+            reason: "Spam"
+        }
+    ]
 }
