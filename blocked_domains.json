@@ -5,6 +5,11 @@
             "domains": ["activitypub-troll.cf", "misskey-forkbomb.cf", "repl.co"],
             "severity": "suspend",
             "reason": "Spam"
+        },
+        {
+            "domains": ["threads.net", "threads.instagram.com"],
+            "severity": "suspend",
+            "reason": "https://ploum.net/2023-06-23-how-to-kill-decentralised-networks.html"
         }
     ]
 }
