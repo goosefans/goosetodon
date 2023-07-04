@@ -5,6 +5,11 @@
             "domains": ["activitypub-troll.cf", "misskey-forkbomb.cf", "repl.co"],
             "severity": "suspend",
             "reason": "Spam"
+        },
+        {
+            "domains": ["threads.net", "threads.instagram.com"],
+            "severity": "suspend",
+            "reason": "Embrace, Extend, Extinguish"
         }
     ]
 }
